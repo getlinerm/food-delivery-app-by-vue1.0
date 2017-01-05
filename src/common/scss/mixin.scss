@@ -1,0 +1,19 @@
+@mixin bg-image($url){
+  background-image: url($url + "@2x.png");
+  @media (-webkit-min-device-pixel-ratio: 3),(min-device-pixel-ratio: 3) {
+    background-image: url($url + "@3x.png");
+  }
+}
+
+.clearfix{
+  display: inline-block;
+  &:after{
+    display: block;
+    content: ".";
+    height: 0px;
+    line-height: 0px;
+    clear: both;
+    visibility: hidden;
+  }
+
+}
